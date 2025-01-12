@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Pizza | Pizza Paradise</title>
+    <link rel="stylesheet" href="1ndex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Pizza Paradise</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="special_offers.html">Special Offers</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+                <li><a href="sitespec.html" aria-label="Site Specifications">Site Specifications</a></li>
+            </ul>
+            <div class="order-btn">
+                <a href="1index.html">Order Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="background">
+        <div class="container">
+            <h1>Order Your Pizza</h1>
+            <form id="pizzaOrderForm">
+                <label for="pizzaType">Select Pizza Type:</label>
+                <select id="pizzaType" name="pizzaType" onchange="updatePrice()">
+                    <option value="margherita">Margherita</option>
+                    <option value="funghi">Funghi</option>
+                    <option value="quatro-stagioni">Quatro Stagioni</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="veggie">Veggie</option>
+                    <option value="bbq">BBQ</option>
+                    <option value="hawaii">Hawaii</option>
+                </select>
+
+                <label for="size">Select Pizza Size:</label>
+                <select id="size" name="size" onchange="updatePrice()">
+                    <option value="small">Small - 10 €</option>
+                    <option value="medium">Medium - 15 €</option>
+                    <option value="large">Large - 20 €</option>
+                </select>
+
+                <label for="quantity">Select Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required onchange="updatePrice()">
+
+                <label>Select Toppings:</label>
+                <div class="toppings">
+                    <div><input type="checkbox" id="cheese" name="topping" value="cheese" onchange="updatePrice()"><label for="cheese">Cheesy Crust (3 €)</label></div>
+                    <div><input type="checkbox" id="pepperoni" name="topping" value="pepperoni" onchange="updatePrice()"><label for="pepperoni">Pepperoni (3 €)</label></div>
+                    <div><input type="checkbox" id="mushrooms" name="topping" value="mushrooms" onchange="updatePrice()"><label for="mushrooms">Mushrooms (1.5 €)</label></div>
+                    <div><input type="checkbox" id="corn" name="topping" value="corn" onchange="updatePrice()"><label for="corn">Corn (2 €)</label></div>
+                    <div><input type="checkbox" id="ham" name="topping" value="ham" onchange="updatePrice()"><label for="ham">Ham (2 €)</label></div>
+                    <div><input type="checkbox" id="sliced_olives" name="topping" value="sliced_olives" onchange="updatePrice()"><label for="sliced_olives">Sliced olives (1 €)</label></div>
+                </div>
+
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" required placeholder="Enter your delivery address">
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required placeholder="Enter your phone number">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="example@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+                <div id="totalPrice" class="price-display">
+                    Total Price: 0.00 €
+                </div>
+
+                <div class="button-container">
+                    <button type="button" id="seeOrderSummaryButton" onclick="calculateOrder()">See Order Summary</button>
+                    <button type="button" id="placeOrderButton" onclick="placeOrder()" style="display: none;">Place Order</button>
+                </div>
+            </form>
+            <div id="orderSummary"></div>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: info@pizzaparadise.com</p>
+        <p>Follow us on social media!</p>
+        <div class="social-media">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter"></a>
+        </div>
+    </footer>
+
+    <script src="1index.js"></script>
+</body>
+</html>

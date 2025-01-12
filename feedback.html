@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | Pizza Paradise</title>
+  <link rel="stylesheet" href="feedback.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Pizza Paradise</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="special_offers.html">Special Offers</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+        <li><a href="sitespec.html" aria-label="Site Specifications">Site Specifications</a></li>
+      </ul>
+      <div class="order-btn">
+        <a href="1index.html">Order Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <header>
+      <h1>We Value Your Feedback!</h1>
+      <p>Help us improve our service and deliver the best pizza experience to you.</p>
+    </header>
+
+    <form action="/submit-feedback" method="POST" class="feedback-form">
+      <!-- Overall Experience -->
+      <label for="overall">How was your overall experience with us?</label>
+      <select id="overall" name="overall">
+        <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+        <option value="4">⭐⭐⭐⭐ - Good</option>
+        <option value="3">⭐⭐⭐ - Average</option>
+        <option value="2">⭐⭐ - Fair</option>
+        <option value="1">⭐ - Poor</option>
+      </select>
+
+      <!-- Order Details -->
+      <label for="order">What did you order?</label>
+      <select id="order" name="order">
+        <option value="margherita">Margherita</option>
+        <option value="pepperoni">Pepperoni</option>
+        <option value="veggie">Veggie</option>
+        <option value="meat-lovers">Meat Lovers</option>
+        <option value="custom">Custom Pizza</option>
+      </select>
+
+      <!-- Service Quality -->
+      <label for="service-quality">How satisfied were you with our service?</label>
+      <select id="service-quality" name="service-quality">
+        <option value="very-satisfied">Very Satisfied</option>
+        <option value="satisfied">Satisfied</option>
+        <option value="neutral">Neutral</option>
+        <option value="dissatisfied">Dissatisfied</option>
+        <option value="very-dissatisfied">Very Dissatisfied</option>
+      </select>
+
+      <!-- Food Quality -->
+      <label for="food-quality">Rate the quality of our food</label>
+      <select id="food-quality" name="food-quality">
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="1">⭐</option>
+      </select>
+
+      <!-- Delivery Experience -->
+      <label for="delivery-experience">How was your delivery experience?</label>
+      <select id="delivery-experience" name="delivery-experience">
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="average">Average</option>
+        <option value="poor">Poor</option>
+      </select>
+
+      <!-- Suggestions or Comments -->
+      <label for="comments">Share any other thoughts or suggestions to help us improve!</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Enter your feedback here..."></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <footer>
+    <h2>Contact Us</h2>
+    <p>Email: info@pizzaparadise.com</p>
+    <p>Follow us on social media!</p>
+    <div class="social-media">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-twitter"></a>
+    </div>
+  </footer>
+
+</body>
+</html>

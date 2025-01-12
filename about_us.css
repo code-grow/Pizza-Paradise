@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdf8f4;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('pizza-background.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f1faee;
+  border-bottom: 2px solid #e63946;
+}
+
+.order-btn a {
+  background: #e63946;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.order-btn a:hover {
+  background: #d62828;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #f1faee;
+}
+
+.about-container {
+  width: 90%;
+  max-width: 800px;
+  background: #fff;
+  padding: 30px;
+  margin: 30px auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 24px;
+  color: #e63946;
+  margin-top: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.photo-gallery {
+  margin-top: 20px;
+}
+
+.photo-gallery h2 {
+  font-size: 24px;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.photo {
+  width: 30%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+footer {
+  background: #1d3557;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a {
+  color: white;
+  margin: 0 15px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #e63946;
+}
+
+@media (max-width: 600px) {
+  .photos .photo {
+      width: 100%;
+  }
+}
